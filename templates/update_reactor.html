@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Reactor Status</title>
+</head>
+<body>
+    <h1>Update Reactor Status: {{ reactor.name }}</h1>
+    <form method="POST">
+        <label for="power_output">Power Output (MW):</label>
+        <input type="number" id="power_output" name="power_output" step="0.1" value="{{ reactor.power_output }}" required><br><br>
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" name="temperature" step="0.1" value="{{ reactor.temperature }}" required><br><br>
+        <label for="pressure">Pressure (MPa):</label>
+        <input type="number" id="pressure" name="pressure" step="0.1" value="{{ reactor.pressure }}" required><br><br>
+        <input type="submit" value="Update Reactor">
+    </form>
+    <a href="{{ url_for('index') }}">Back to Reactor List</a>
+</body>
+</html>

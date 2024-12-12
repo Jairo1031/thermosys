@@ -1,0 +1,12 @@
+[
+    {"name": "Reactor1", "power_output": 100, "temperature": 300, "pressure": 15},
+    {"name": "Reactor2", "power_output": 80, "temperature": 320, "pressure": 16},
+    {"name": "Reactor3", "power_output": 120, "temperature": 290, "pressure": 14},
+    {"name": "Reactor4", "power_output": 90, "temperature": 310, "pressure": 15},
+    {"name": "Reactor5", "power_output": 110, "temperature": 305, "pressure": 15.5},
+    {"name": "Reactor6", "power_output": 95, "temperature": 315, "pressure": 14.8},
+    {"name": "Reactor7", "power_output": 85, "temperature": 295, "pressure": 14.2},
+    {"name": "Reactor8", "power_output": 105, "temperature": 308, "pressure": 15.2},
+    {"name": "Reactor9", "power_output": 75, "temperature": 285, "pressure": 13.8},
+    {"name": "Reactor10", "power_output": 115, "temperature": 312, "pressure": 15.7}
+]

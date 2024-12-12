@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMR Management System</title>
+</head>
+<body>
+    <h1>SMR Management System</h1>
+    <a href="{{ url_for('add_reactor') }}">Add New Reactor</a>
+    {% for reactor in reactors %}
+        <h2>{{ reactor.name }}</h2>
+        <p>Status: Power={{ reactor.power_output }}MW, Temp={{ reactor.temperature }}°C, Pressure={{ reactor.pressure }}MPa</p>
+        <a href="{{ url_for('update_reactor', name=reactor.name) }}">Update Status</a>
+        {% if reactor.recommendations %}
+            <h3>Recommendations:</h3>
+            <ul>
+            {% for rec in reactor.recommendations %}
+                <li>{{ rec }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No recommendations at this time.</p>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
